@@ -14,6 +14,6 @@ exports.create = async (req, res) => {
 };
 
 exports.read = async (req, res) => {
-  const products = await Product.find({});
+  const products = await Product.find({}).exec();
   res.json(products);
 };
